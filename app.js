@@ -74,13 +74,20 @@ const hungry = [
     `Am`, 
     `Hungry`
 ];
-// 15b--problems here--will try to come back around
-const newSpans = document.createElement(`span`);
-for (h=0; h < newSpans.length; h++) {
-    newSpans[h].innerHTML = `<span>${hungry[h]} </span>`;
+// // 15b--problems here--will try to come back around
+// const end = document.querySelector(`body`);
+// const newSpans = document.createElement(`span`);
+// for (h=0; h < hungry.length; h++) {
+//     newSpans.innerText = hungry[h];
+// }
+// end.append(newSpans); THIS IS WRONG HERE!!!
+
+
+for (a of hungry) {
+    const span = document.createElement(`span`);
+    // `${a} ` is used to add spaces in between
+    span.innerText = `${a} `;
+    // or span.innerHTML = `${a} `;
+    body.append(span); //body is already set to a variable up at line 44
 }
-body.append(hungry);
-
-
-
 // 15b. Using a loop, add each item from the hungry array as span elements/tags to the bottom of the document/webpage
